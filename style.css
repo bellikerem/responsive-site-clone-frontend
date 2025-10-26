@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    border-style: solid;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+}
+
+.box {
+    border-style: none;
+}
+
+#Menu {
+    margin: 0 auto;
+}
+
+#Menu ul{
+    list-style-type: none;
+}
+
+#Menu ul li{
+    display: inline-block;
+    margin: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#Menu ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+#Button #Login{
+    display: inline-block;
+    width: 75px;
+    height: 35px;
+    color:black;
+    background-color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 7px;
+    margin: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#Button #Login:hover{
+    border-radius: 5px;
+    background-color: rgb(241, 241, 241);
+}
+
+
+#Button #getNotionfree{
+    display: inline-block;
+    border-radius: 5px;
+    width: 150px;
+    height: 35px;
+    background-color: blue;
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+}
