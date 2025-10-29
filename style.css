@@ -259,3 +259,64 @@
     font-size: 20px;
     margin-bottom: 50px;
 }
+
+#use-grid-2 {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1.35fr 7.30fr 1.35fr;
+    background-color: white;
+}
+
+#use-grid-2 h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+}
+
+#use-grid-2 #first-row a{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:blue;
+}
+
+#use-grid-2 #first-row p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#use-grid-2 #first-row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 5fr 5fr;
+}
+
+#use-grid-2 #first-row #imagine-box{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+#use-grid-2 #second-row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 2.5fr 2.5fr 2.5fr 2.5fr;
+    margin-top: 25px;
+    gap: 20px;
+}
+
+#use-grid-2 #second-row a{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-style: solid;
+    border-color: rgb(248, 248, 248);
+    border-radius: 20px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+#use-grid-2 #second-row a img{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
