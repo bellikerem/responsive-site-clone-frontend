@@ -23,4 +23,20 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    const mobileToggle = document.getElementById("mobile-toggle");
+    const mainMenu = document.getElementById("Menu");
+
+    const ACTIVE_CLASS = "menu-open";
+
+    if (mobileToggle && mainMenu) {
+        mobileToggle.addEventListener("click", () => {
+            mainMenu.classList.toggle(ACTIVE_CLASS);
+
+            mobileToggle.classList.toggle('is-active'); 
+            
+            console.log("Mobil menü açıldı/kapandı.");
+            
+        })
+    }
 });

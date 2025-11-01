@@ -32,7 +32,6 @@
 }
 
 .dropdown_menu {
-    /*display: none;*/ 
     position: absolute;
     z-index: 1000;
     background-color: white;
@@ -154,13 +153,21 @@
 }
 
 #hero-section {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1.35fr 7.30fr 1.35fr;
 }
 
 #hero-section #Picture{
+    display: flex;
+    justify-content: center;
     margin-top: 75px;
+}
+
+#hero-section #Big-Title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #hero-section #Big-Title h1{
@@ -222,22 +229,30 @@
     background-color: rgb(248, 248, 248);
 }
 
+#use-grid #use-grid-content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 10fr;
+}
+
 #use-grid h1{
     font-size: 60px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #use-grid img{
+    display: flex;
     border-radius: 20px;
     margin-top: 25px;
 }
 
 #use-grid #picture1forgrid{
+    display: flex;
     margin: auto;
 }
 
 #use-grid #picture4forgrid{
-    margin-left: 25px;
+    display: flex;
 }
 
 #use-grid #picturecolumn {
@@ -544,4 +559,270 @@ footer .links:hover {
 #footer-content #notionfor #explore-more:hover {
     text-decoration: underline;
     color: blue;
+}
+
+/*******************************************************************
+
+
+                |   Mobile Design Section   | 
+
+
+*******************************************************************/
+
+#mobile-toggle{
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .dropdown_menu.dropdown_open {
+        display: none;
+    }
+
+    #Menu, #Button {
+        display: none;
+    }
+
+    #mobile-toggle{
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    #Navigator{
+        justify-content: space-between;
+    }
+
+    #Menu.menu-open{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 999;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #Menu.menu-open ul li{
+        display: block;
+        text-align: left;
+        margin: 10px 20px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+    }
+
+    #hero-section, #use-grid, #use-grid-2, #use-grid-3, footer{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    #hero-section {
+        display: flex !important; 
+        flex-direction: column; 
+        align-items: center; 
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+    
+    #hero-section #hero-section-content {
+        display: block !important;
+        width: 100%;
+    }
+    
+    #hero-section > div:first-child,
+    #hero-section > div:last-child {
+        display: none !important;
+    }
+
+    #hero-section #Picture, 
+    #hero-section #Big-Picture {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #hero-section #Big-Picture img, 
+    #hero-section #Picture img{ 
+        max-width: 100%; 
+        height: auto;
+    }
+
+    #hero-section #marks img {
+        max-width: 100%; 
+        height: auto;
+        min-width: 75px; 
+    }
+
+    #hero-section #marks {
+        flex-wrap: wrap; 
+        gap: 10px; 
+        justify-content: center;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    #hero-section #Big-Title h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    #use-grid {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        margin: 0px;
+    }
+
+    #use-grid #use-grid-content {
+        display: block !important;
+        width: 100%;
+    }
+
+    #use-grid > div:first-child,
+    #use-grid > div:last-child{
+        display: none !important;
+    }
+
+    #use-grid #use-grid-pictures {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #use-grid #picturecolumn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #use-grid #use-grid-pictures, #use-grid #picturecolumn, #use-grid #use-grid-last-picture {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #use-grid #use-grid-pictures img, #use-grid #picturecolumn img, #use-grid #use-grid-last-picture img{
+        width: 100%;
+        height: auto;
+    }
+
+    #use-grid #use-grid-title h1, #use-grid #use-grid-last-titles h1{
+        font-size: 32px;
+        text-align: center;
+    }
+
+    #use-grid-2 #first-row{
+        flex-direction: column;
+        grid-template-columns: 10fr;
+    }
+
+    #use-grid-2 #first-row #imagine-box img {
+        width: 100%; 
+        height: auto;
+    }
+
+    #use-grid-2 #second-row{
+        grid-template-columns: 10fr;
+        gap: 15px;
+    }
+
+    #use-grid-3 {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    #use-grid-3 #main-content {
+        display: block !important;
+        width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    #use-grid-3 > div:first-child,
+    #use-grid-3 > div:last-child{
+        display: none !important;
+    }
+
+    #use-grid-3 #big-box,
+    #use-grid-3 #little-boxs,
+    #use-grid-3 #little-box-1,
+    #use-grid-3 #little-box-1 #text-content,
+    #use-grid-3 #little-box-2,
+    #use-grid-3 #little-box-2 #text-content
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin-right: 0 !important;
+        padding: 0 !important;
+    }
+
+    #use-grid-3 #little-boxs{
+        margin-top: 25px;
+    }
+
+    #use-grid-3 #little-boxs .usegrid3-imagebox{
+        display: none;
+    }
+
+    #use-grid-3 img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    #use-grid-3 h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    #use-grid-3 p, #use-grid-3 h1, #use-grid-3 h4{
+        text-align: center;
+        margin-left: 0 !important;
+    }
+
+    footer {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        gap: 30px;
+    }
+
+    footer #footer-content {
+        display: block !important;
+        width: 100%;
+    }
+
+    footer > div:first-child,
+    footer > div:last-child{
+        display: none !important;
+    }
+
+    footer #logos,
+    footer #company
+    footer #Download-links
+    footer #resources
+    footer #notionfor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 }
