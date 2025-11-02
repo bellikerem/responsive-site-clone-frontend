@@ -47,6 +47,11 @@ This project served as a technical exercise to master advanced layout techniques
 
 ---
 
+## 🌐 Live Demo
+[Click here to view the project](https://bellikerem.github.io/responsive-site-clone-frontend)
+
+---
+
 ## 👤 Developer
 
 **Kerem Can Belli**
